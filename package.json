@@ -1,0 +1,45 @@
+{
+  "name": "hyj-better-scroll-react",
+  "version": "1.0.0",
+  "description": "better-scroll react",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d dist --ignore test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hyj-young/hyj-better-scroll-react.git"
+  },
+  "keywords": [
+    "better-scroll",
+    "react"
+  ],
+  "author": "heyunjiang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hyj-young/hyj-better-scroll-react/issues"
+  },
+  "homepage": "https://github.com/hyj-young/hyj-better-scroll-react#readme",
+  "dependencies": {
+    "better-scroll": "^1.13.2",
+    "prop-types": "^15.6.1",
+    "react": "^16.4.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^1.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "less": "^3.8.1",
+    "less-loader": "^4.1.0",
+    "style-loader": "^0.23.0",
+    "webpack": "^4.12.0",
+    "webpack-cli": "^3.0.3",
+    "webpack-dev-server": "^3.1.4"
+  }
+}
