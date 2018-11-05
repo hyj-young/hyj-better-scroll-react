@@ -14,16 +14,19 @@ use `npm i hyj-better-scroll-react -S` to install
 ```javascript
 import Scrollbars from 'hyj-better-scroll-react'
 
-const scroll = ({children, pullingDownFunc, pullingUpFunc, className})=>{
+const scroll = ({children, pullingDownFunc, pullingUpFunc, className, initOptions})=>{
   const ScrollbarsProps = {
     className: className || 'commonScrollCardBoxContainer',
     pullingDownFunc,
-    pullingUpFunc
+    pullingUpFunc,
+    initOptions
   }
   return (
-    <Scrollbars {...ScrollbarsProps}>
-      {children}
-    </Scrollbars>
+    <div className='commonScrollCardBoxPoor'>
+      <Scrollbars {...ScrollbarsProps}>
+        {children}
+      </Scrollbars>
+    </div>
   )
 }
 ```

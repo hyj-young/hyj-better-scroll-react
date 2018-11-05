@@ -26,7 +26,8 @@ class scroll extends React.Component {
     if(!this.scrollObj) {
       this.scrollObj = new BScroll(this.scrollElement, {
         pullDownRefresh: true,
-        pullUpLoad: true
+        pullUpLoad: true,
+        ...this.props.initOptions
       })
 
       if(this.props.pullingDownFunc) {
@@ -66,6 +67,7 @@ scroll.propTypes = {
   children: PropTypes.element.isRequired,
   pullingDownFunc: PropTypes.func,
   pullingUpFunc: PropTypes.func,
-  className: PropTypes.string
+  className: PropTypes.string,
+  initOptions: PropTypes.object
 }
 export default scroll
