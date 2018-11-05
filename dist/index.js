@@ -4,6 +4,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = require('react');
@@ -63,10 +65,10 @@ var scroll = function (_React$Component) {
       var _this2 = this;
 
       if (!this.scrollObj) {
-        this.scrollObj = new _betterScroll2.default(this.scrollElement, {
+        this.scrollObj = new _betterScroll2.default(this.scrollElement, _extends({
           pullDownRefresh: true,
           pullUpLoad: true
-        });
+        }, this.props.initOptions));
 
         if (this.props.pullingDownFunc) {
           this.scrollObj.on('pullingDown', function () {
@@ -117,6 +119,7 @@ scroll.propTypes = {
   children: _propTypes2.default.element.isRequired,
   pullingDownFunc: _propTypes2.default.func,
   pullingUpFunc: _propTypes2.default.func,
-  className: _propTypes2.default.string
+  className: _propTypes2.default.string,
+  initOptions: _propTypes2.default.object
 };
 exports.default = scroll;
